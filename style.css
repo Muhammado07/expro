@@ -223,9 +223,7 @@ a {
   .hero {
     height: 90vh;
   }
-  .hero .content {
-    padding-top: 90px;
-  }
+
   .ar .hero .content h1,
   .ar .hero .content h1 .change {
     font-size: 46px;
@@ -234,13 +232,19 @@ a {
     width: 100%;
     padding-top: 110px;
   }
+}
+@media screen and (max-width: 380px) {
+  .hero .content {
+    padding-top: 75px;
+  }
+  .hero .content h1 {
+    font-size: 26px;
+  }
   .hero .content h3 {
     font-size: 18px;
   }
-}
-@media screen and (max-width: 380px) {
-  .hero .content h1 {
-    font-size: 26px;
+  .hero .content .cta a {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 320px) {
