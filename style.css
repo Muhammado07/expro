@@ -277,6 +277,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .details .content::after {
   content: "";
@@ -289,14 +290,18 @@ a {
   z-index: 1;
   right: 49.1%;
 }
-.details .content:nth-child(1):after {
-  top: 11%;
+.details .content:after {
+  top: 40%;
 }
 .details .content:nth-child(2):after {
-  top: 46%;
+  top: 42%;
 }
 .details .content:nth-child(3):after {
-  top: 80%;
+  top: 36%;
+}
+
+.details .content:nth-child(5):after {
+  top: 36%;
 }
 .ar .details .content:nth-child(2):after {
   top: 46%;
@@ -305,15 +310,19 @@ a {
   top: 78%;
 }
 .details .content .img {
-  width: auto;
+  width: 68%;
   height: auto;
   margin: auto;
+}
+.details .content .sd {
+  width: 100%;
 }
 .details .content .img img {
   width: 90%;
   height: 100%;
   object-fit: cover;
 }
+
 .details .content.rights .img img {
   margin-left: 50px;
 }
@@ -334,17 +343,20 @@ a {
   border-radius: 3px;
 }
 .details .content .det h2 {
-  font-size: 24px;
-  line-height: 48px;
+  font-size: 26px;
+  line-height: 33px;
   font-weight: 400;
   margin-top: 15px;
   margin-bottom: 10px;
 }
+.details .content:nth-child(even) .det {
+  padding-left: 50px;
+}
 .details .content .det h3 {
   margin-top: 30px;
   margin-bottom: 20px;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 42px;
+  line-height: 42px;
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
@@ -365,6 +377,7 @@ a {
     width: 100%;
     margin-bottom: 40px;
   }
+
   .details .content.rights .img img {
     margin-left: 0;
   }
@@ -372,7 +385,8 @@ a {
     margin-right: 0;
   }
   .details .content .det,
-  .details .content:nth-child(odd) .det {
+  .details .content:nth-child(odd) .det,
+  .details .content:nth-child(even) .det {
     padding-left: 0;
   }
   .ar .details .content:nth-child(odd) .det {
