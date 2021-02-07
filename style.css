@@ -177,8 +177,11 @@ a {
 }
 .ar .hero .content h1,
 .ar .hero .content h1 .change {
-  font-size: 55px;
+  font-size: 65px;
   letter-spacing: 0;
+}
+.ar .hero .content h1 .change {
+  font-size: 75px;
 }
 .hero .content h3 {
   margin: 50px 0;
@@ -267,7 +270,7 @@ a {
   position: absolute;
   width: 5px;
   background-color: var(--first-color);
-  top: 0;
+  top: 3%;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
@@ -293,21 +296,27 @@ a {
 .details .content:after {
   top: 40%;
 }
-.details .content:nth-child(2):after {
-  top: 42%;
+.details .content:nth-child(1):after {
+  top: 43%;
+}
+.details .content:nth-child(2):after,
+.details .content:nth-child(4):after {
+  top: 35%;
 }
 .details .content:nth-child(3):after {
-  top: 36%;
+  top: 28%;
 }
-
 .details .content:nth-child(5):after {
-  top: 36%;
+  top: 38%;
+}
+.details .content:nth-child(6):after {
+  top: 37%;
 }
 .ar .details .content:nth-child(2):after {
   top: 46%;
 }
 .ar .details .content:nth-child(3):after {
-  top: 78%;
+  top: 28%;
 }
 .details .content .img {
   width: 68%;
@@ -332,7 +341,7 @@ a {
 .details .content:nth-child(odd) .det {
   padding-left: 50px;
 }
-.ar .details .content:nth-child(odd) .det {
+.ar .details .content:nth-child(even) .det {
   padding-right: 50px;
 }
 .details .content .det .num {
@@ -389,7 +398,7 @@ a {
   .details .content:nth-child(even) .det {
     padding-left: 0;
   }
-  .ar .details .content:nth-child(odd) .det {
+  .ar .details .content:nth-child(even) .det {
     padding-right: 0;
   }
   .details .content::after {
@@ -401,7 +410,7 @@ a {
   .details .content .det p {
     width: 100%;
   }
-  .details .content:nth-child(even) .img {
+  .details .content:nth-child(odd) .img {
     order: -1;
   }
 }
