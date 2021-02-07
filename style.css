@@ -312,11 +312,12 @@ a {
 .details .content:nth-child(6):after {
   top: 37%;
 }
-.ar .details .content:nth-child(2):after {
-  top: 46%;
+.ar .details .content:nth-child(2):after,
+.ar .details .content:nth-child(6):after {
+  top: 42%;
 }
 .ar .details .content:nth-child(3):after {
-  top: 28%;
+  top: 33%;
 }
 .details .content .img {
   width: 68%;
