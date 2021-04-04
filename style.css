@@ -112,9 +112,11 @@ a {
   padding: 25px 0;
   letter-spacing: 1px;
   outline: none;
+  font-family: "sofia-pro", sans-serif !important;
 }
 .navbar.ar .nav .links a {
   letter-spacing: 0;
+  font-family: Tahoma, sans-serif !important;
 }
 .no .nav .links a {
   color: var(--second-color);
@@ -1143,9 +1145,11 @@ a {
 }
 .accordion button .accordion-title {
   padding: 1em 1.5em 1em 0;
+  font-family: "sofia-pro", sans-serif !important;
 }
 .accordion.ar button .accordion-title {
   padding: 1em 0 1em 1.5em;
+  font-family: Tahoma, sans-serif !important;
 }
 .accordion button .icon {
   display: inline-block;
