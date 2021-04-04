@@ -124,7 +124,7 @@ a {
 }
 .nav .links .sub-nav,
 .nav .links .last {
-  margin-left: 25px;
+  margin-left: 15px;
 }
 .nav .links .subnavbtn {
   background-color: transparent;
@@ -132,11 +132,6 @@ a {
   outline: none;
   cursor: pointer;
   position: relative;
-}
-.nav .links .subnavbtn img {
-  transform: rotate(90deg);
-  margin-left: 5px;
-  transition: all 0.3s ease-in-out;
 }
 .nav .links .last {
   position: relative;
@@ -430,6 +425,9 @@ a {
     .nav-expand-content
     .nav-link {
     background-color: var(--third-color);
+  }
+  .flags {
+    display: flex;
   }
 }
 
