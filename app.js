@@ -1,11 +1,3 @@
-const goy = document.querySelectorAll(".goo");
-goy.forEach((gos) => {
-    gos.addEventListener("click", () => {
-        const el = document.getElementById(gos.getAttribute("data-scroll"));
-        el.scrollIntoView({ behavior: "smooth", block: "center" });
-    });
-});
-
 // Mobile Nav
 
 const navExpand = [].slice.call(document.querySelectorAll(".nav-expand"));
@@ -26,6 +18,26 @@ navExpand.forEach((item) => {
         .querySelector(".nav-back-link")
         .addEventListener("click", () => item.classList.remove("active"));
 });
+
+
+const goy = document.querySelectorAll(".goo");
+const bodys = document.querySelector('body');
+const x = window.matchMedia("(max-width: 767px)")
+goy.forEach((gos) => {
+    gos.addEventListener("click", () => {
+        const el = document.getElementById(gos.getAttribute("data-scroll"));
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        if (el === x) {
+            el.style.marginTop = "10px"
+        } else {
+            el.style.marginTop = "50px";
+        }
+        bodys.classList.remove('nav-is-toggled')
+    });
+});
+
+
 
 // not-so-important stuff starts here
 
