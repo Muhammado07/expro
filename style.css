@@ -1523,7 +1523,7 @@ a {
 }
 .footer .bottom {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   margin-top: 30px;
@@ -1534,6 +1534,13 @@ a {
   font-size: 12px;
   text-transform: uppercase;
   line-height: 2;
+}
+.footer .bottom a {
+  color: #7f7f7f;
+  transition: all 0.3s ease-in-out;
+}
+.footer .bottom a:hover {
+  color: var(--second-color);
 }
 @media screen and (max-width: 768px) {
   .footer .content {
