@@ -223,6 +223,9 @@ a {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+.nav .links .subnavbtn.cta:hover a::after {
+  transform: scale(0);
+}
 .nav .links .sub-content .sub-img img {
   width: 300px;
   height: 200px;
@@ -939,7 +942,7 @@ a {
 }
 .ps-timeline-sec .container ol.ps-timeline li {
   float: left;
-  width: 16%;
+  width: 20%;
   padding-top: 30px;
   position: relative;
 }
@@ -1068,6 +1071,18 @@ a {
 }
 .content .cta a {
   padding: 15px 30px;
+  font-weight: 300;
+  background: linear-gradient(136.49deg, #2d72b9 0%, #2b93b2 100%);
+  border-radius: 25px;
+  outline: none;
+  color: var(--third-color);
+  transition: all 0.3s ease-in-out 0ms;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.nav .links .subnavbtn.cta a {
+  padding: 10px 20px;
   font-weight: 300;
   background: linear-gradient(136.49deg, #2d72b9 0%, #2b93b2 100%);
   border-radius: 25px;
