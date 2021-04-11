@@ -733,7 +733,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  align-items: flex-end;
+  align-items: baseline;
   text-align: center;
 }
 .why.us .content {
