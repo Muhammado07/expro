@@ -46,7 +46,7 @@ ham.addEventListener("click", function () {
     document.body.classList.toggle("nav-is-toggled");
 });
 // Watch Video
-const playVideo = document.querySelector(".play-icon");
+const playVideo = document.querySelector(".plays");
 const closeVideo = document.querySelector(".close-video");
 const watch = document.querySelector(".watch");
 const videoPlay = document.querySelector(".video-play");

@@ -522,7 +522,7 @@ a {
   }
 }
 .video .content h1 {
-  font-size: 55px;
+  font-size: 48px;
   font-weight: 600;
   color: var(--third-color);
   margin-bottom: 24px;
@@ -609,6 +609,11 @@ a {
 }
 .video .content .play a:hover {
   opacity: 0.9;
+}
+.video .plays {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 484px) {
   .video .content .play {
