@@ -82,7 +82,7 @@
     }
     .tips-watch .content {
       padding-top: 5%;
-      width: 70%;
+      width: 100%;
     }
     .tips-watch .content::before {
       display: none;
@@ -95,7 +95,6 @@
       position: relative;
     }
     .videos .videos-content,
-    .disting .content,
     .tips-tools .tooly {
       display: flex;
       justify-content: space-between;
@@ -120,6 +119,12 @@
       color: var(--third-color);
       font-weight: 400;
     }
+    .disting .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+    }
     .disting .content .info {
       padding: 0 30px 0 0;
       background-color: #f8f9fc;
@@ -135,7 +140,7 @@
       margin-top: 50px;
     }
     .disting .content .disting-img {
-      width: 70%;
+      width: 100%;
       height: 100%;
     }
     .disting .content .disting-img img {
@@ -146,26 +151,51 @@
       width: 85%;
       margin: 0 auto;
     }
+    .tips-tools .content,
+    .tips-tools .content .toolys .tooly {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .tips-tools .content .toolys {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: flex-start;
+      grid-gap: 20px;
+      margin-bottom: 20px;
+    }
+
     .tips-tools .tooly {
       background-color: var(--third-color);
-      box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
-      margin-bottom: 20px;
     }
     .tips-tools .tooly .info {
       width: 100%;
-      padding: 0 30px;
+      padding: 30px 30px 50px;
     }
+
     .tips-tools .tooly .info .cta {
       margin-top: 40px;
     }
     .tips-tools .tooly .tolly-img {
       width: 100%;
-      height: 500px;
+      height: 100%;
     }
     .tips-tools .tooly .tolly-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    .tools-content {
+      height: 285px;
+      width: 100%;
+      padding: 30px;
+      background: linear-gradient(136.49deg, #2d72b9 0%, #2b93b2 100%);
+      color: var(--third-color);
+    }
+    .tools-content h3 {
+      font-size: 56px;
     }
     .join {
       width: 100%;
@@ -228,7 +258,7 @@
       position: relative;
       display: block;
       padding: 0 22px 0 22px;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 300;
       color: #3b3b3b;
       line-height: 60px;
@@ -280,23 +310,6 @@
     #player .player .vp-title {
       display: none !important;
     }
-
-    .ar .why .content .cons .more h3 {
-      font-size: 21px;
-    }
-    .ar .video .content h1 {
-      font-size: 31px;
-    }
-    .ar .video .content .play .play-icon {
-      margin-left: 12px;
-    }
-    .ar .disting .content .info {
-      padding: 0 0 0 30px;
-      margin-bottom: 40px;
-    }
-    .ar .join-select .custom-option {
-      text-align: right;
-    }
     .tips-watch .wrap-video {
       overflow: hidden;
       background: url("imgs/york-video.png") center center no-repeat;
@@ -317,12 +330,80 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.1);
     }
+    .tips-watch .wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .tips-tools {
+      margin-bottom: 20px;
+    }
+    .tips-tools .tooly .tolly-img.imgs {
+      height: 477px;
+    }
+    .btu-tools {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--third-color);
+      box-shadow: none !important;
+      border-bottom: 1px solid #f1f1f1;
+    }
+    .btu-tools .icons-cal {
+      background-color: var(--third-color);
+      box-shadow: none !important;
+    }
+    .btu-tools .icons-cal .imgy {
+      width: 120px;
+      height: auto;
+    }
+    .btu-tools .icons-cal .imgy img {
+      width: 100%;
+      height: 100%;
+    }
+    .btu-tools .info {
+      padding: 30px 30px 50px;
+    }
+    .btu-tools .info h4 {
+      color: var(--second-color);
+      font-size: 20px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+    .btu-tools .info .cta {
+      margin-top: 40px;
+    }
+
+    .ar .why .content .cons .more h3 {
+      font-size: 21px;
+    }
+    .ar .video .content h1 {
+      font-size: 31px;
+    }
+    .ar .video .content .play .play-icon {
+      margin-left: 12px;
+    }
+    .ar .disting .content .info {
+      padding: 0 0 0 30px;
+      margin-bottom: 40px;
+      text-align: right;
+    }
+    .ar .join-select .custom-option {
+      text-align: right;
+    }
     .ar .tips-watch .wrapper {
       position: absolute;
       top: 0;
       right: 0;
     }
+
     @media screen and (max-width: 767px) {
+      .tips-hero {
+        height: 200px;
+      }
+      .tips-hero h1 {
+        font-size: 36px;
+      }
       .join .content h3 {
         font-size: 22px;
       }
@@ -348,11 +429,11 @@
         width: 100%;
       }
       .tips-tools .tooly .info {
-        text-align: right;
+        text-align: left;
         padding: 20px 10px 30px;
       }
       .tips-tools .tooly .tolly-img {
-        height: 200px;
+        height: auto;
       }
       .join-select .custom-select-wrapper {
         width: 90%;
@@ -360,16 +441,13 @@
       }
       .disting .content .info {
         padding: 0 0 50px 0;
-        text-align: right;
+        text-align: left;
       }
       .disting .content .disting-img {
         width: 100%;
       }
       .tips-watch {
         height: 200px;
-      }
-      .ar .video .content h1 {
-        font-size: 20px;
       }
       .tips-watch .content {
         width: 100%;
@@ -382,6 +460,43 @@
       }
       .why.tips-us .content .cons .more h3 {
         font-size: 16px;
+      }
+      .tips-tools .content .toolys,
+      .disting .content {
+        grid-template-columns: 1fr;
+      }
+      .tools-content,
+      .tips-tools .tooly .tolly-img.imgs {
+        height: auto;
+      }
+      .tools-content h3 {
+        font-size: 30px;
+      }
+      .tips-tools .content .toolys div:nth-child(2) .tooly:nth-child(1) {
+        margin-bottom: 20px;
+      }
+      .btu-tools {
+        flex-direction: column;
+      }
+      .btu-tools .icons-cal {
+        margin-top: 30px;
+      }
+      .ar .tips-hero h1 {
+        font-size: 32px;
+      }
+      .ar .video .content h1 {
+        font-size: 20px;
+      }
+      .ar .disting .content .info {
+        padding: 0;
+        margin-bottom: 40px;
+        text-align: right;
+      }
+      .ar .disting .content .info p {
+        font-size: 16px;
+      }
+      .ar .tools-content h3 {
+        font-size: 21px;
       }
     }
   </style>
@@ -589,13 +704,13 @@
                 يقدر يحصل على خصم طوال السنة باستخدام رمزك الترويجي
               </p>
               <div class="cta">
-                <a href="imgs/promo code.jpg" target="_blank" download
+                <a href="imgs/promo-code.jpg" target="_blank" download
                   >تحميل الصورة</a
                 >
               </div>
             </div>
             <div class="disting-img">
-              <img src="imgs/promo code.jpg" alt="promo-code" />
+              <img src="imgs/promo-code.jpg" alt="promo-code" />
             </div>
           </div>
         </div>
@@ -604,73 +719,82 @@
       <!-- Joins -->
       <div class="join">
         <div class="content">
-          <h3>5-أدوات تساعدك في زيادة مبيعاتك و عمولاتك؟</h3>
+          <h3>أدوات تساعدك في زيادة مبيعاتك و عمولاتك؟</h3>
         </div>
       </div>
       <!-- End Join -->
+
       <div class="tips-tools">
         <div class="container">
           <div class="content">
-            <div class="tooly">
-              <div class="info">
-                <h4>
-                  قياس الوحدة (ساعد عميلك في اختيار وحدة المكيف الأنسب له
-                  باستخدام قياس الوحدة المتوفرة على موقعنا الإلكتروني).
-                </h4>
-                <div class="cta">
-                  <a
-                    href="https://york.com.sa/en/btu-calculator"
-                    target="_blank"
-                    download
-                    >قياس الوحدة</a
-                  >
+            <div class="toolys">
+              <div>
+                <div class="btu-tools">
+                  <div class="icons-cal">
+                    <div class="imgy">
+                      <img src="imgs/calculator.svg" alt="calculator" />
+                    </div>
+                  </div>
+                  <div class="info">
+                    <h4>
+                      قياس الوحدة (ساعد عميلك في اختيار وحدة المكيف الأنسب له
+                      باستخدام قياس الوحدة المتوفرة على موقعنا الإلكتروني).
+                    </h4>
+                    <div class="cta">
+                      <a
+                        href="https://york.com.sa/ar/btu-calculator"
+                        target="_blank"
+                        download
+                        >قياس الوحدة</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="tooly">
+                  <div class="info spec">
+                    <h4>
+                      استخدم النص كمثال عند الإعلان عن رمزك الترويجي (ننصحك تغير
+                      المحتوى و تبدع فيه بطريقتك).
+                    </h4>
+                    <div class="cta">
+                      <a href="imgs/communi-full.jpg" target="_blank" download
+                        >تحميل الصورة</a
+                      >
+                    </div>
+                  </div>
+                  <div class="tolly-img img-full">
+                    <img src="imgs/communi-full.jpg" alt="communi" />
+                  </div>
                 </div>
               </div>
-              <div class="tolly-img">
-                <img src="imgs/btu.jpg" alt="btu" />
-              </div>
-            </div>
-            <div class="tooly">
-              <div class="info">
-                <h4>أنشر و شارك الملصقات مع عملائك.</h4>
-                <div class="cta">
-                  <a href="imgs/promo.jpg" target="_blank" download
-                    >تحميل الصورة</a
-                  >
+              <div>
+                <div class="tooly">
+                  <div class="info">
+                    <h4>
+                      ضيف رقمنا على الواتس أب للإجابة على استفساراتك ومشاركتك
+                      طرق جديدة لزيادة مبيعاتك و غيرها.
+                    </h4>
+                    <div class="cta">
+                      <a href="tel:966537846738" download>+966537846738</a>
+                    </div>
+                  </div>
+                  <div class="tolly-img imgs">
+                    <img src="imgs/whatsapp.jpg" alt="WhatsApp" />
+                  </div>
                 </div>
-              </div>
-              <div class="tolly-img">
-                <img src="imgs/promo.jpg" alt="promo" />
-              </div>
-            </div>
-            <div class="tooly">
-              <div class="info">
-                <h4>
-                  استخدم النص كمثال عند الإعلان عن رمزك الترويجي (ننصحك تغير
-                  المحتوى و تبدع فيه بطريقتك).
-                </h4>
-                <div class="cta">
-                  <a href="imgs/communi-full.jpg" target="_blank" download
-                    >تحميل الصورة</a
-                  >
+                <div class="tooly">
+                  <div class="info">
+                    <h4>أنشر و شارك الملصقات أدناه مع عملائك.</h4>
+                    <div class="cta">
+                      <a href="imgs/promo.jpg" target="_blank" download
+                        >تحميل الصورة</a
+                      >
+                    </div>
+                  </div>
+                  <div class="tolly-img">
+                    <img src="imgs/promo.jpg" alt="promo" />
+                  </div>
                 </div>
-              </div>
-              <div class="tolly-img">
-                <img src="imgs/communi.jpg" alt="communi" />
-              </div>
-            </div>
-            <div class="tooly">
-              <div class="info">
-                <h4>
-                  ضيف رقمنا على الواتس أب للإجابة على استفساراتك ومشاركتك طرق
-                  جديدة لزيادة مبيعاتك و غيرها.
-                </h4>
-                <div class="cta">
-                  <a href="tel:966537846738" download>+966537846738</a>
-                </div>
-              </div>
-              <div class="tolly-img imgs">
-                <img src="imgs/whatsapp.jpg" alt="WhatsApp" />
               </div>
             </div>
           </div>
