@@ -82,6 +82,7 @@
     }
     .tips-watch .content {
       padding-top: 5%;
+      width: 70%;
     }
     .tips-watch .content::before {
       display: none;
@@ -296,6 +297,31 @@
     .ar .join-select .custom-option {
       text-align: right;
     }
+    .tips-watch .wrap-video {
+      overflow: hidden;
+      background: url("imgs/york-video.png") center center no-repeat;
+      background-size: cover;
+      position: relative;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      min-width: 100%;
+      min-height: 100%;
+    }
+    .tips-watch .wrap-video:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+    }
+    .ar .tips-watch .wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
     @media screen and (max-width: 767px) {
       .join .content h3 {
         font-size: 22px;
@@ -425,9 +451,7 @@
 
       <!-- Video -->
       <div class="video tips-watch">
-        <video class="video-container" autoplay loop>
-          <source src="imgs/video.mp4" type="video/mp4" />
-        </video>
+        <div class="wrap-video"></div>
         <div class="wrapper">
           <div class="container">
             <div class="set-color">
@@ -486,7 +510,7 @@
             <div class="content">
               <div class="video-co">
                 <video class="video-play" width="900" height="600" controls>
-                  <source src="imgs/video.mp4" type="video/mp4" />
+                  <source src="imgs/york-2.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -689,7 +713,7 @@
 
       playVideo.addEventListener("click", function () {
         watch.classList.add("view");
-        videoPlay.setAttribute("src", "imgs/video.mp4");
+        videoPlay.setAttribute("src", "imgs/york-2.mp4");
       });
       closeVideo.addEventListener("click", function () {
         watch.classList.remove("view");
