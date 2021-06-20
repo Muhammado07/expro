@@ -708,6 +708,7 @@ a {
   position: relative;
   background: linear-gradient(136.49deg, #2d72b9 0%, #2b93b2 100%);
   color: var(--third-color);
+  width: 100vw;
 }
 .join .content {
   display: flex;
@@ -940,7 +941,7 @@ a {
   padding: 10px;
 }
 .ps-timeline-sec .container ol.ps-timeline {
-  margin: 300px 0 200px;
+  margin: 300px 0 250px;
   padding: 0;
   border-top: 2px solid var(--first-color);
   list-style: none;
@@ -1556,5 +1557,312 @@ a {
   }
   .footer .content p {
     font-size: 11px;
+  }
+}
+
+.tips-hero {
+  background: url("imgs/tips.jpeg") center center no-repeat;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tips-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  background-image: linear-gradient(
+    222deg,
+    rgba(21, 22, 54, 0.904),
+    rgba(5, 3, 17, 0.925) 54%
+  );
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.tips-hero h1 {
+  color: var(--third-color);
+  font-size: 46px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.tip-shop {
+  text-decoration: none;
+  color: var(--first-color);
+  font-size: 18px;
+  margin-left: 20px;
+  background-color: var(--third-color);
+  padding: 10px 30px;
+  transition: all 0.3s ease-in-out;
+}
+.tips-join .tip-shop:hover {
+  opacity: 0.9;
+}
+.tips-join .content {
+  flex-direction: column;
+}
+.tips-join .tip-shop {
+  margin-left: 0;
+}
+.tips-watch {
+  height: 300px;
+  width: 100%;
+}
+.tips-watch .set-color {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.tips-watch .content {
+  padding-top: 5%;
+}
+.tips-watch .content::before {
+  display: none;
+}
+.videos,
+.disting,
+.tips-tools {
+  padding: 50px 0;
+  background-color: #f8f9fc;
+  position: relative;
+}
+.videos .videos-content,
+.disting .content,
+.tips-tools .tooly {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tips-tools .tooly:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.videos .videos-content .tip-video {
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+}
+.videos .videos-content .tip-video h3 {
+  font-size: 22px;
+  font-weight: 500;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.join .content h3 {
+  font-size: 32px;
+  color: var(--third-color);
+  font-weight: 400;
+}
+.disting .content .info {
+  padding: 0 30px 0 0;
+  background-color: #f8f9fc;
+}
+.disting .content .info p,
+.tips-tools .tooly .info h4 {
+  color: var(--second-color);
+  font-size: 20px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+.disting .content .info .cta {
+  margin-top: 50px;
+}
+.disting .content .disting-img {
+  width: 70%;
+  height: 100%;
+}
+.disting .content .disting-img img {
+  width: 100%;
+  height: 100%;
+}
+.tips-tools .content {
+  width: 85%;
+  margin: 0 auto;
+}
+.tips-tools .tooly {
+  background-color: var(--third-color);
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+  margin-bottom: 20px;
+}
+.tips-tools .tooly .info {
+  width: 100%;
+  padding: 0 30px;
+}
+.tips-tools .tooly .info .cta {
+  margin-top: 40px;
+}
+.tips-tools .tooly .tolly-img {
+  width: 100%;
+  height: 500px;
+}
+.tips-tools .tooly .tolly-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.join {
+  width: 100%;
+}
+.join-select .content {
+  justify-content: space-around;
+}
+
+.join-select .custom-select-wrapper {
+  position: relative;
+  user-select: none;
+  width: 25%;
+}
+.join-select .custom-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-width: 0 2px 0 2px;
+  border-style: solid;
+  border-color: #394a6d;
+}
+.join-select .custom-select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #3b3b3b;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
+  cursor: pointer;
+  border-width: 2px 0 2px 0;
+  border-style: solid;
+  border-color: #394a6d;
+}
+.join-select .custom-options {
+  position: absolute;
+  display: block;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  border: 2px solid #394a6d;
+  border-top: 0;
+  background: #fff;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+.join-select .custom-select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.join-select .custom-option {
+  position: relative;
+  display: block;
+  padding: 0 22px 0 22px;
+  font-size: 22px;
+  font-weight: 300;
+  color: #3b3b3b;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.join-select .custom-option:hover {
+  cursor: pointer;
+  background-color: #b2b2b2;
+}
+.join-select .custom-option.selected {
+  color: #ffffff;
+  background-color: #305c91;
+}
+.join-select .arrow {
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+.join-select .arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+.join-select .arrow::before {
+  left: -5px;
+  transform: rotate(45deg);
+  background-color: #394a6d;
+}
+.join-select .arrow::after {
+  left: 5px;
+  transform: rotate(-45deg);
+  background-color: #394a6d;
+}
+.join-select .open .arrow::before {
+  left: -5px;
+  transform: rotate(-45deg);
+}
+.join-select .open .arrow::after {
+  left: 5px;
+  transform: rotate(45deg);
+}
+
+#player .player .vp-title {
+  display: none !important;
+}
+@media screen and (max-width: 767px) {
+  .join .content h3 {
+    font-size: 22px;
+  }
+  .videos .videos-content,
+  .disting .content,
+  .tips-tools .tooly,
+  .join-select .content,
+  .tips-tools .tooly:nth-child(even) {
+    flex-direction: column;
+  }
+  .tips-join .content {
+    padding: 0 5px;
+  }
+  .videos .videos-content .tip-video {
+    margin-bottom: 20px;
+  }
+  .videos .videos-content .tip-video .tip-info iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  .tips-tools .content {
+    width: 100%;
+  }
+  .tips-tools .tooly .info {
+    text-align: center;
+    padding: 20px 10px 30px;
+  }
+  .tips-tools .tooly .tolly-img {
+    height: 200px;
+  }
+  .join-select .custom-select-wrapper {
+    width: 90%;
+    margin-top: 20px;
+  }
+  .disting .content .info {
+    padding: 0 0 50px 0;
+    text-align: center;
+  }
+  .disting .content .disting-img {
+    width: 100%;
+  }
+  .tips-watch {
+    height: 200px;
   }
 }

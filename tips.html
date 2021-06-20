@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Al Salem Johnson Controls Expro" />
+    <meta
+      name="keywords"
+      content="al salem johnson controls, al salem johnson controls expro, johnson controls, expro"
+    />
+    <meta property="og:title" content="Al Salem Johnson Controls EG" />
+    <meta property="og:description" content="Al Salem Johnson Controls Expro" />
+    <link rel="shortcut icon" href="https://york.com.sa/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Al Salem Johnson Controls Expro</title>
+  </head>
+  <style>
+    .tips-hero {
+      background: url("imgs/tips.jpeg") center center no-repeat;
+      background-size: cover;
+      height: 300px;
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .tips-hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+      background-image: linear-gradient(
+        222deg,
+        rgba(21, 22, 54, 0.904),
+        rgba(5, 3, 17, 0.925) 54%
+      );
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .tips-hero h1 {
+      color: var(--third-color);
+      font-size: 46px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .tip-shop {
+      text-decoration: none;
+      color: var(--first-color);
+      font-size: 18px;
+      margin-left: 20px;
+      background-color: var(--third-color);
+      padding: 10px 30px;
+      transition: all 0.3s ease-in-out;
+    }
+    .tips-join .tip-shop:hover {
+      opacity: 0.9;
+    }
+    .tips-join .content {
+      flex-direction: column;
+    }
+    .tips-join .tip-shop {
+      margin-left: 0;
+    }
+    .tips-watch {
+      height: 300px;
+      width: 100%;
+    }
+    .tips-watch .set-color {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .tips-watch .content {
+      padding-top: 5%;
+    }
+    .tips-watch .content::before {
+      display: none;
+    }
+    .videos,
+    .disting,
+    .tips-tools {
+      padding: 50px 0;
+      background-color: #f8f9fc;
+      position: relative;
+    }
+    .videos .videos-content,
+    .disting .content,
+    .tips-tools .tooly {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .tips-tools .tooly:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .videos .videos-content .tip-video {
+      padding: 20px 10px;
+      border-radius: 10px;
+      box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+    }
+    .videos .videos-content .tip-video h3 {
+      font-size: 22px;
+      font-weight: 500;
+      padding-bottom: 15px;
+      text-align: center;
+    }
+    .join .content h3 {
+      font-size: 32px;
+      color: var(--third-color);
+      font-weight: 400;
+    }
+    .disting .content .info {
+      padding: 0 30px 0 0;
+      background-color: #f8f9fc;
+    }
+    .disting .content .info p,
+    .tips-tools .tooly .info h4 {
+      color: var(--second-color);
+      font-size: 20px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+    .disting .content .info .cta {
+      margin-top: 50px;
+    }
+    .disting .content .disting-img {
+      width: 70%;
+      height: 100%;
+    }
+    .disting .content .disting-img img {
+      width: 100%;
+      height: 100%;
+    }
+    .tips-tools .content {
+      width: 85%;
+      margin: 0 auto;
+    }
+    .tips-tools .tooly {
+      background-color: var(--third-color);
+      box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+      margin-bottom: 20px;
+    }
+    .tips-tools .tooly .info {
+      width: 100%;
+      padding: 0 30px;
+    }
+    .tips-tools .tooly .info .cta {
+      margin-top: 40px;
+    }
+    .tips-tools .tooly .tolly-img {
+      width: 100%;
+      height: 500px;
+    }
+    .tips-tools .tooly .tolly-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .join {
+      width: 100%;
+    }
+    .join-select .content {
+      justify-content: space-around;
+    }
+
+    .join-select .custom-select-wrapper {
+      position: relative;
+      user-select: none;
+      width: 25%;
+    }
+    .join-select .custom-select {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border-width: 0 2px 0 2px;
+      border-style: solid;
+      border-color: #394a6d;
+    }
+    .join-select .custom-select__trigger {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      font-size: 20px;
+      font-weight: 300;
+      color: #3b3b3b;
+      height: 60px;
+      line-height: 60px;
+      background: #ffffff;
+      cursor: pointer;
+      border-width: 2px 0 2px 0;
+      border-style: solid;
+      border-color: #394a6d;
+    }
+    .join-select .custom-options {
+      position: absolute;
+      display: block;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      border: 2px solid #394a6d;
+      border-top: 0;
+      background: #fff;
+      transition: all 0.5s;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .join-select .custom-select.open .custom-options {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    .join-select .custom-option {
+      position: relative;
+      display: block;
+      padding: 0 22px 0 22px;
+      font-size: 22px;
+      font-weight: 300;
+      color: #3b3b3b;
+      line-height: 60px;
+      cursor: pointer;
+      transition: all 0.5s;
+      text-align: left;
+    }
+    .join-select .custom-option:hover {
+      cursor: pointer;
+      background-color: #b2b2b2;
+    }
+    .join-select .custom-option.selected {
+      color: #ffffff;
+      background-color: #305c91;
+    }
+    .join-select .arrow {
+      position: relative;
+      height: 15px;
+      width: 15px;
+    }
+    .join-select .arrow::before,
+    .arrow::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      width: 0.15rem;
+      height: 100%;
+      transition: all 0.5s;
+    }
+    .join-select .arrow::before {
+      left: -5px;
+      transform: rotate(45deg);
+      background-color: #394a6d;
+    }
+    .join-select .arrow::after {
+      left: 5px;
+      transform: rotate(-45deg);
+      background-color: #394a6d;
+    }
+    .join-select .open .arrow::before {
+      left: -5px;
+      transform: rotate(-45deg);
+    }
+    .join-select .open .arrow::after {
+      left: 5px;
+      transform: rotate(45deg);
+    }
+
+    #player .player .vp-title {
+      display: none !important;
+    }
+    @media screen and (max-width: 767px) {
+      .join .content h3 {
+        font-size: 22px;
+      }
+      .videos .videos-content,
+      .disting .content,
+      .tips-tools .tooly,
+      .join-select .content,
+      .tips-tools .tooly:nth-child(even) {
+        flex-direction: column;
+      }
+      .tips-join .content {
+        padding: 0 5px;
+      }
+      .videos .videos-content .tip-video {
+        margin-bottom: 20px;
+      }
+      .videos .videos-content .tip-video .tip-info iframe {
+        width: 100%;
+        height: auto;
+      }
+
+      .tips-tools .content {
+        width: 100%;
+      }
+      .tips-tools .tooly .info {
+        text-align: left;
+        padding: 20px 10px 30px;
+      }
+      .tips-tools .tooly .tolly-img {
+        height: 200px;
+      }
+      .join-select .custom-select-wrapper {
+        width: 90%;
+        margin-top: 20px;
+      }
+      .disting .content .info {
+        padding: 0 0 50px 0;
+        text-align: left;
+      }
+      .disting .content .disting-img {
+        width: 100%;
+      }
+      .tips-watch {
+        height: 200px;
+      }
+    }
+  </style>
+  <body>
+    <!-- Hero -->
+    <div class="tips-hero">
+      <h1>How to increase your sales?</h1>
+    </div>
+
+    <!-- End Hero -->
+
+    <!-- Join -->
+    <div class="join">
+      <div class="content">
+        <h3>1-Promote your promo code using multiple channels and methods.</h3>
+      </div>
+    </div>
+    <!-- End Join -->
+
+    <!-- Why -->
+    <div class="why us">
+      <div class="container">
+        <div class="content">
+          <div class="cons">
+            <div class="img">
+              <img src="imgs/share.svg" alt="Social media" />
+            </div>
+            <div class="more">
+              <h3>Social media</h3>
+            </div>
+          </div>
+          <div class="cons">
+            <div class="img">
+              <img src="imgs/copywriting.svg" alt="Blogs & Vlogs" />
+            </div>
+            <div class="more">
+              <h3>Blogs & Vlogs</h3>
+            </div>
+          </div>
+          <div class="cons">
+            <div class="img">
+              <img src="imgs/poster.svg" alt="Printouts" />
+            </div>
+            <div class="more">
+              <h3>Printouts</h3>
+            </div>
+          </div>
+          <div class="cons">
+            <div class="img">
+              <img src="imgs/groups.svg" alt="Gatherings" />
+            </div>
+            <div class="more">
+              <h3>Conversations & Gatherings</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Why -->
+
+    <!-- Join -->
+    <div class="join tips-join">
+      <div class="content">
+        <h3>2-Learn more about our products.</h3>
+        <br />
+        <a href="https://york.com.sa/en/store" target="_blank" class="tip-shop"
+          >Visit YORK Store</a
+        >
+      </div>
+    </div>
+    <!-- End Join -->
+
+    <!-- Video -->
+    <div class="video tips-watch">
+      <video class="video-container" autoplay loop>
+        <source src="imgs/york-2.mp4" type="video/mp4" />
+      </video>
+      <div class="wrapper">
+        <div class="container">
+          <div class="set-color">
+            <div class="content">
+              <h1>Watch our 2 min “WHY YORK” video</h1>
+              <div class="play">
+                <div class="plays">
+                  <div class="play-icon">
+                    <svg
+                      width="8px"
+                      height="10px"
+                      viewBox="0 0 8 10"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <g
+                          transform="translate(-225.000000, -383.000000)"
+                          fill="#FFFFFF"
+                        >
+                          <polygon
+                            transform="translate(229.000000, 388.000000) rotate(-270.000000) translate(-229.000000, -388.000000) "
+                            points="229 384 234 392 224 392"
+                          ></polygon>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <p>Watch Video</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Video -->
+
+    <!-- Watch Video -->
+    <div class="watch">
+      <div class="wrapper">
+        <div class="close-video">
+          <img src="imgs/icon-close.svg" alt="close" />
+        </div>
+        <div class="container">
+          <div class="content">
+            <div class="video-co">
+              <video class="video-play" width="900" height="600" controls>
+                <source src="imgs/york-2.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Watch Video -->
+
+    <!-- Join -->
+    <div class="join">
+      <div class="content">
+        <h3>3-Watch our KASH program videos</h3>
+      </div>
+    </div>
+    <!-- End Join -->
+    <div class="videos">
+      <div class="container">
+        <div class="videos-content">
+          <div class="tip-video">
+            <h3>About KASH Program</h3>
+            <div class="tip-info">
+              <iframe
+                src="https://player.vimeo.com/video/533935156?title=0&byline=0&portrait=0"
+                width="660"
+                height="360"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="tip-video">
+            <h3>Learn more about KASH products &amp; their incentives</h3>
+            <div class="tip-info">
+              <iframe
+                title="vimeo-player"
+                src="https://player.vimeo.com/video/533943678?title=0&byline=0&portrait=0"
+                width="660"
+                height="360"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Joins -->
+    <div class="join">
+      <div class="content">
+        <h3>4-Distinguish your promo code from existing discounts/offers</h3>
+      </div>
+    </div>
+    <!-- End Join -->
+
+    <div class="disting">
+      <div class="container">
+        <div class="content">
+          <div class="info">
+            <p>
+              Mentioning your promo code can be used on top of existing
+              discount/offers (Additional savings) and share the discount visual
+              if available.
+            </p>
+            <div class="cta">
+              <a
+                href="https://mcusercontent.com/4013611385baeba5a8eb08ca5/images/a45cb738-223f-6517-6100-529e32d5168e.jpg"
+                download
+                target="_blank"
+                >Download Image</a
+              >
+            </div>
+          </div>
+          <div class="disting-img">
+            <img src="imgs/promo code.jpg" alt="promo-code" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Joins -->
+    <div class="join">
+      <div class="content">
+        <h3>5-Tools you might need?</h3>
+      </div>
+    </div>
+    <!-- End Join -->
+    <div class="tips-tools">
+      <div class="container">
+        <div class="content">
+          <div class="tooly">
+            <div class="info">
+              <h4>
+                BTU Calculator (Guide your customers to pick the right unit
+                capacity “BTU”).
+              </h4>
+              <div class="cta">
+                <a
+                  href="https://york.com.sa/en/btu-calculator"
+                  target="_blank"
+                  download
+                  >BTU Calculator</a
+                >
+              </div>
+            </div>
+            <div class="tolly-img">
+              <img src="imgs/btu.jpg" alt="btu" />
+            </div>
+          </div>
+          <div class="tooly">
+            <div class="info">
+              <h4>Use this visual to promote your promo code.</h4>
+              <div class="cta">
+                <a href="imgs/promo.jpg" target="_blank" download
+                  >Download Image</a
+                >
+              </div>
+            </div>
+            <div class="tolly-img">
+              <img src="imgs/promo.jpg" alt="promo" />
+            </div>
+          </div>
+          <div class="tooly">
+            <div class="info">
+              <h4>
+                Use this text template to better communicate your promo code.
+              </h4>
+              <div class="cta">
+                <a href="imgs/communi-full.jpg" target="_blank" download
+                  >Download Image</a
+                >
+              </div>
+            </div>
+            <div class="tolly-img">
+              <img src="imgs/communi.jpg" alt="communi" />
+            </div>
+          </div>
+          <div class="tooly">
+            <div class="info">
+              <h4>
+                Add our WhatsApp number to receive our broadcasted messages
+                which will help guide you on how to gain more by increasing your
+                sales.
+              </h4>
+              <div class="cta">
+                <a href="tel:966537846738" download>+966537846738</a>
+              </div>
+            </div>
+            <div class="tolly-img imgs">
+              <img src="imgs/whatsapp.jpg" alt="WhatsApp" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Joins -->
+    <div class="join join-select">
+      <div class="content">
+        <h3>What is your preferred type of communication?</h3>
+        <div class="custom-select-wrapper">
+          <div class="custom-select">
+            <div class="custom-select__trigger">
+              <span>Email</span>
+              <div class="arrow"></div>
+            </div>
+            <div class="custom-options">
+              <span class="custom-option selected" data-value="Email"
+                >Email</span
+              >
+              <span class="custom-option" data-value="SMS">SMS</span>
+              <span class="custom-option" data-value="WhatsApp">WhatsApp</span>
+              <span class="custom-option" data-value="Phone call"
+                >Phone call</span
+              >
+              <span class="custom-option" data-value="Other">Other</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Join -->
+
+    <script>
+      // Watch Video
+      const playVideo = document.querySelector(".plays");
+      const closeVideo = document.querySelector(".close-video");
+      const watch = document.querySelector(".watch");
+      const videoPlay = document.querySelector(".video-play");
+
+      playVideo.addEventListener("click", function () {
+        watch.classList.add("view");
+        videoPlay.setAttribute("src", "imgs/york-2.mp4");
+      });
+      closeVideo.addEventListener("click", function () {
+        watch.classList.remove("view");
+        videoPlay.setAttribute("src", "");
+      });
+
+      // Selectbox
+      document
+        .querySelector(".custom-select-wrapper")
+        .addEventListener("click", function () {
+          this.querySelector(".custom-select").classList.toggle("open");
+        });
+
+      for (const option of document.querySelectorAll(".custom-option")) {
+        option.addEventListener("click", function () {
+          if (!this.classList.contains("selected")) {
+            this.parentNode
+              .querySelector(".custom-option.selected")
+              .classList.remove("selected");
+            this.classList.add("selected");
+            this.closest(".custom-select").querySelector(
+              ".custom-select__trigger span"
+            ).textContent = this.textContent;
+          }
+        });
+      }
+      window.addEventListener("click", function (e) {
+        const select = document.querySelector(".custom-select");
+        if (!select.contains(e.target)) {
+          select.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>

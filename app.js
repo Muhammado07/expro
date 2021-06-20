@@ -59,6 +59,12 @@ closeVideo.addEventListener("click", function () {
     watch.classList.remove("view");
     videoPlay.setAttribute("src", "");
 });
+
+
+window.onload = function () {
+    var element = document.querySelector('.video-container');
+    element.muted = "muted";
+}
 // const items = document.querySelectorAll(".accordion button");
 
 // function toggleAccordion() {
