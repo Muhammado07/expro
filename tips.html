@@ -626,9 +626,16 @@
         <div class="container">
           <div class="content">
             <div class="video-co">
-              <video class="video-play" width="900" height="600" controls>
-                <source src="imgs/york-2.mp4" type="video/mp4" />
-              </video>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/DFEwIarI4uo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="video-play"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -850,7 +857,10 @@
 
       playVideo.addEventListener("click", function () {
         watch.classList.add("view");
-        videoPlay.setAttribute("src", "imgs/york-2.mp4");
+        videoPlay.setAttribute(
+          "src",
+          "https://www.youtube.com/embed/DFEwIarI4uo"
+        );
       });
       closeVideo.addEventListener("click", function () {
         watch.classList.remove("view");
