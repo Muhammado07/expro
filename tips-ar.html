@@ -201,110 +201,7 @@
       width: 100%;
     }
     .join-select .content {
-      justify-content: space-around;
-    }
-
-    .join-select .custom-select-wrapper {
-      position: relative;
-      user-select: none;
-      width: 25%;
-    }
-    .join-select .custom-select {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      border-width: 0 2px 0 2px;
-      border-style: solid;
-      border-color: #394a6d;
-    }
-    .join-select .custom-select__trigger {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 22px;
-      font-size: 20px;
-      font-weight: 300;
-      color: #3b3b3b;
-      height: 60px;
-      line-height: 60px;
-      background: #ffffff;
-      cursor: pointer;
-      border-width: 2px 0 2px 0;
-      border-style: solid;
-      border-color: #394a6d;
-    }
-    .join-select .custom-options {
-      position: absolute;
-      display: block;
-      bottom: 100%;
-      left: 0;
-      right: 0;
-      border: 2px solid #394a6d;
-      border-top: 0;
-      background: #fff;
-      transition: all 0.5s;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      z-index: 2;
-    }
-    .join-select .custom-select.open .custom-options {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
-    }
-    .join-select .custom-option {
-      position: relative;
-      display: block;
-      padding: 0 22px 0 22px;
-      font-size: 22px;
-      font-weight: 300;
-      color: #3b3b3b;
-      line-height: 60px;
-      cursor: pointer;
-      transition: all 0.5s;
-      text-align: left;
-    }
-    .join-select .custom-option:hover {
-      cursor: pointer;
-      background-color: #b2b2b2;
-    }
-    .join-select .custom-option.selected {
-      color: #ffffff;
-      background-color: #305c91;
-    }
-    .join-select .arrow {
-      position: relative;
-      height: 15px;
-      width: 15px;
-    }
-    .join-select .arrow::before,
-    .arrow::after {
-      content: "";
-      position: absolute;
-      bottom: 0px;
-      width: 0.15rem;
-      height: 100%;
-      transition: all 0.5s;
-    }
-    .join-select .arrow::before {
-      left: -5px;
-      transform: rotate(45deg);
-      background-color: #394a6d;
-    }
-    .join-select .arrow::after {
-      left: 5px;
-      transform: rotate(-45deg);
-      background-color: #394a6d;
-    }
-    .join-select .open .arrow::before {
-      left: -5px;
-      transform: rotate(-45deg);
-    }
-    .join-select .open .arrow::after {
-      left: 5px;
-      transform: rotate(45deg);
+      justify-content: flex-start;
     }
 
     #player .player .vp-title {
@@ -368,6 +265,12 @@
       color: var(--second-color);
       font-size: 20px;
       line-height: 1.7;
+      font-weight: 600;
+    }
+    .btu-tools .info p {
+      color: var(--second-color);
+      font-size: 18px;
+      line-height: 1.4;
       font-weight: 400;
     }
     .btu-tools .info .cta {
@@ -395,6 +298,138 @@
       position: absolute;
       top: 0;
       right: 0;
+    }
+
+    .join-select .radio {
+      position: relative;
+      cursor: pointer;
+      line-height: 20px;
+      font-size: 18px;
+      margin: 25px;
+      margin-right: 0;
+      display: flex;
+    }
+    .join-select .radio .label {
+      position: relative;
+      display: block;
+      float: left;
+      margin-left: 10px;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #c8ccd4;
+      border-radius: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .join-select .radio .label:after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: var(--third-color);
+      transform: scale(0);
+      transition: all 0.2s ease;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+    .join-select .radio:hover .label:after {
+      transform: scale(3.6);
+    }
+    .join-select input[type="radio"]:checked + .label {
+      border-color: var(--third-color);
+    }
+    .join-select input[type="radio"]:checked + .label:after {
+      transform: scale(1);
+      transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+      opacity: 1;
+    }
+    .join-select .cntr {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .join-select .hidden {
+      display: none;
+    }
+
+    .join-select .form__group {
+      position: relative;
+      padding: 15px 0 0;
+      margin-top: 10px;
+      width: 35%;
+    }
+
+    .join-select .form__field {
+      font-family: inherit;
+      width: 100%;
+      border: 0;
+      border-bottom: 2px solid var(--third-color);
+      outline: 0;
+      font-size: 1.3rem;
+      color: var(--third-color);
+      padding: 7px 0;
+      background: transparent;
+      transition: border-color 0.2s;
+    }
+    .join-select .form__field::placeholder {
+      color: transparent;
+    }
+    .join-select .form__field:placeholder-shown ~ .form__label {
+      font-size: 1.3rem;
+      cursor: text;
+      top: 20px;
+    }
+
+    .join-select .form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: var(--third-color);
+    }
+
+    .join-select .form__field:focus {
+      padding-bottom: 6px;
+      font-weight: 700;
+      border-width: 3px;
+      border-color: var(--third-color);
+      border-image-slice: 1;
+    }
+    .join-select .form__field:focus ~ .form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: var(--third-color);
+      font-weight: 700;
+    }
+
+    /* reset input */
+    .join-select .form__field:required,
+    .join-select .form__field:invalid {
+      box-shadow: none;
+    }
+
+    .join-select .sub-bn {
+      margin-top: 30px;
+    }
+    .join-select .sub-bn button {
+      border: none;
+      background: var(--third-color);
+      padding: 10px 30px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .join-select .sub-bn button:hover {
+      opacity: 0.9;
     }
 
     @media screen and (max-width: 767px) {
@@ -435,10 +470,7 @@
       .tips-tools .tooly .tolly-img {
         height: auto;
       }
-      .join-select .custom-select-wrapper {
-        width: 90%;
-        margin-top: 20px;
-      }
+
       .disting .content .info {
         padding: 0 0 50px 0;
         text-align: left;
@@ -480,6 +512,16 @@
       }
       .btu-tools .icons-cal {
         margin-top: 30px;
+      }
+
+      .join-select .cntr {
+        flex-direction: column;
+      }
+      .join-select .cntr {
+        align-items: flex-start;
+      }
+      .join-select .form__group {
+        width: 100%;
       }
       .ar .tips-hero h1 {
         font-size: 32px;
@@ -745,10 +787,11 @@
                     </div>
                   </div>
                   <div class="info">
-                    <h4>
-                      قياس الوحدة (ساعد عميلك في اختيار وحدة المكيف الأنسب له
-                      باستخدام قياس الوحدة المتوفرة على موقعنا الإلكتروني).
-                    </h4>
+                    <h4>قياس الوحدة</h4>
+                    <p>
+                      ساعد عميلك في اختيار وحدة المكيف الأنسب له باستخدام قياس
+                      الوحدة المتوفرة على موقعنا الإلكتروني.
+                    </p>
                     <div class="cta">
                       <a
                         href="https://york.com.sa/ar/btu-calculator"
@@ -784,7 +827,9 @@
                       طرق جديدة لزيادة مبيعاتك و غيرها.
                     </h4>
                     <div class="cta">
-                      <a href="tel:966537846738" download>+966537846738</a>
+                      <a href="https://wa.me/00966537846738" download
+                        >+966537846738</a
+                      >
                     </div>
                   </div>
                   <div class="tolly-img imgs">
@@ -812,34 +857,46 @@
 
       <!-- Joins -->
       <div class="join join-select">
-        <div class="content">
-          <h3>
-            ايش طريقة التواصل اللي تفضلها لإستلام كل ما هو جديد في برنامج كاش؟
-          </h3>
-          <div class="custom-select-wrapper">
-            <div class="custom-select">
-              <div class="custom-select__trigger">
-                <span>رسائل نصية </span>
-                <div class="arrow"></div>
-              </div>
-              <div class="custom-options">
-                <span class="custom-option selected" data-value="Email"
-                  >رسائل نصية
-                </span>
-                <span class="custom-option" data-value="SMS"
-                  >مكالمات هاتفية</span
-                >
-                <span class="custom-option" data-value="WhatsApp"
-                  >بريد إلكتروني</span
-                >
-                <span class="custom-option" data-value="Phone call"
-                  >واتس أب</span
-                >
-                <span class="custom-option" data-value="Other"
-                  >غيرها (يرجى تحديد )</span
-                >
-              </div>
-            </div>
+        <div class="container">
+          <div class="content">
+            <h3>
+              ايش طريقة التواصل اللي تفضلها لإستلام كل ما هو جديد في برنامج كاش؟
+            </h3>
+          </div>
+          <div class="cntr">
+            <label for="opt1" class="radio">
+              <input type="radio" name="rdo" id="opt1" class="hidden" />
+              <span class="label"></span>رسائل نصية
+            </label>
+
+            <label for="opt2" class="radio">
+              <input type="radio" name="rdo" id="opt2" class="hidden" />
+              <span class="label"></span>مكالمات هاتفية
+            </label>
+
+            <label for="opt3" class="radio">
+              <input type="radio" name="rdo" id="opt3" class="hidden" />
+              <span class="label"></span>بريد إلكتروني
+            </label>
+
+            <label for="opt4" class="radio">
+              <input type="radio" name="rdo" id="opt4" class="hidden" />
+              <span class="label"></span>واتس أب
+            </label>
+          </div>
+          <div class="form__group field">
+            <input
+              type="input"
+              class="form__field"
+              placeholder="غيرها"
+              name="name"
+              id="name"
+              required
+            />
+            <label for="name" class="form__label">غيرها</label>
+          </div>
+          <div class="sub-bn">
+            <button class="suby">إرسال</button>
           </div>
         </div>
       </div>
@@ -860,33 +917,6 @@
       closeVideo.addEventListener("click", function () {
         watch.classList.remove("view");
         videoPlay.setAttribute("src", "");
-      });
-
-      // Selectbox
-      document
-        .querySelector(".custom-select-wrapper")
-        .addEventListener("click", function () {
-          this.querySelector(".custom-select").classList.toggle("open");
-        });
-
-      for (const option of document.querySelectorAll(".custom-option")) {
-        option.addEventListener("click", function () {
-          if (!this.classList.contains("selected")) {
-            this.parentNode
-              .querySelector(".custom-option.selected")
-              .classList.remove("selected");
-            this.classList.add("selected");
-            this.closest(".custom-select").querySelector(
-              ".custom-select__trigger span"
-            ).textContent = this.textContent;
-          }
-        });
-      }
-      window.addEventListener("click", function (e) {
-        const select = document.querySelector(".custom-select");
-        if (!select.contains(e.target)) {
-          select.classList.remove("open");
-        }
       });
     </script>
   </body>
