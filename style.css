@@ -2039,19 +2039,25 @@ a {
   line-height: 20px;
   font-size: 18px;
   margin: 25px;
-  margin-right: 0;
+  margin-left: 0;
   display: flex;
+}
+.ar .join-select .radio {
+  margin-right: 0;
 }
 .join-select .radio .label {
   position: relative;
   display: block;
   float: left;
-  margin-left: 10px;
+  margin-right: 10px;
   width: 20px;
   height: 20px;
   border: 2px solid #c8ccd4;
   border-radius: 100%;
   -webkit-tap-highlight-color: transparent;
+}
+.ar .join-select .radio .label {
+  margin-left: 10px;
 }
 .join-select .radio .label:after {
   content: "";
