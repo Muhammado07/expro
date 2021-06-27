@@ -14,545 +14,182 @@
     <link rel="stylesheet" href="style.css" />
     <title>Al Salem Johnson Controls Expro</title>
   </head>
-  <style>
-    .ar {
-      direction: rtl;
-      font-family: "Tahoma";
-    }
-    .tips-hero {
-      background: url("imgs/tips.jpeg") center center no-repeat;
-      background-size: cover;
-      height: 300px;
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .tips-hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.3;
-      background-image: linear-gradient(
-        222deg,
-        rgba(21, 22, 54, 0.904),
-        rgba(5, 3, 17, 0.925) 54%
-      );
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-    .tips-hero h1 {
-      color: var(--third-color);
-      font-size: 46px;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .tip-shop {
-      text-decoration: none;
-      color: var(--first-color);
-      font-size: 18px;
-      margin-left: 20px;
-      background-color: var(--third-color);
-      padding: 10px 30px;
-      transition: all 0.3s ease-in-out;
-    }
-    .tips-join .tip-shop:hover {
-      opacity: 0.9;
-    }
-    .tips-join .content {
-      flex-direction: column;
-    }
-    .tips-join .tip-shop {
-      margin-left: 0;
-    }
-    .tips-watch {
-      height: 300px;
-      width: 100%;
-    }
-    .tips-watch .set-color {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    .tips-watch .content {
-      padding-top: 5%;
-      width: 100%;
-    }
-    .tips-watch .content::before {
-      display: none;
-    }
-    .videos,
-    .disting,
-    .tips-tools {
-      padding: 50px 0;
-      background-color: #f8f9fc;
-      position: relative;
-    }
-    .videos .videos-content,
-    .tips-tools .tooly {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .tips-tools .tooly:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-    .videos .videos-content .tip-video {
-      padding: 20px 10px;
-      border-radius: 10px;
-      box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
-    }
-    .videos .videos-content .tip-video h3 {
-      font-size: 22px;
-      font-weight: 500;
-      padding-bottom: 15px;
-      text-align: center;
-    }
-    .join .content h3 {
-      font-size: 32px;
-      color: var(--third-color);
-      font-weight: 400;
-    }
-    .disting .content {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: center;
-      align-items: center;
-    }
-    .disting .content .info {
-      padding: 0 30px 0 0;
-      background-color: #f8f9fc;
-    }
-    .disting .content .info p,
-    .tips-tools .tooly .info h4 {
-      color: var(--second-color);
-      font-size: 20px;
-      line-height: 1.7;
-      font-weight: 400;
-    }
-    .disting .content .info .cta {
-      margin-top: 50px;
-    }
-    .disting .content .disting-img {
-      width: 100%;
-      height: 100%;
-    }
-    .disting .content .disting-img img {
-      width: 100%;
-      height: 100%;
-    }
-    .tips-tools .content {
-      width: 85%;
-      margin: 0 auto;
-    }
-    .tips-tools .content,
-    .tips-tools .content .toolys .tooly {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    .tips-tools .content .toolys {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: center;
-      align-items: flex-start;
-      grid-gap: 20px;
-      margin-bottom: 20px;
-    }
-
-    .tips-tools .tooly {
-      background-color: var(--third-color);
-    }
-    .tips-tools .tooly .info {
-      width: 100%;
-      padding: 30px 30px 50px;
-    }
-
-    .tips-tools .tooly .info .cta {
-      margin-top: 40px;
-    }
-    .tips-tools .tooly .tolly-img {
-      width: 100%;
-      height: 100%;
-    }
-    .tips-tools .tooly .tolly-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .tools-content {
-      height: 285px;
-      width: 100%;
-      padding: 30px;
-      background: linear-gradient(136.49deg, #2d72b9 0%, #2b93b2 100%);
-      color: var(--third-color);
-    }
-    .tools-content h3 {
-      font-size: 56px;
-    }
-    .join {
-      width: 100%;
-    }
-    .join-select .content {
-      justify-content: flex-start;
-    }
-
-    #player .player .vp-title {
-      display: none !important;
-    }
-    .tips-watch .wrap-video {
-      overflow: hidden;
-      background: url("imgs/york-video.png") center center no-repeat;
-      background-size: cover;
-      position: relative;
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      min-width: 100%;
-      min-height: 100%;
-    }
-    .tips-watch .wrap-video:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.1);
-    }
-    .tips-watch .wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .tips-tools {
-      margin-bottom: 20px;
-    }
-    .tips-tools .tooly .tolly-img.imgs {
-      height: 477px;
-    }
-    .btu-tools {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--third-color);
-      box-shadow: none !important;
-      border-bottom: 1px solid #f1f1f1;
-    }
-    .btu-tools .icons-cal {
-      background-color: var(--third-color);
-      box-shadow: none !important;
-    }
-    .btu-tools .icons-cal .imgy {
-      width: 120px;
-      height: auto;
-    }
-    .btu-tools .icons-cal .imgy img {
-      width: 100%;
-      height: 100%;
-    }
-    .btu-tools .info {
-      padding: 30px 30px 50px;
-    }
-    .btu-tools .info h4 {
-      color: var(--second-color);
-      font-size: 20px;
-      line-height: 1.7;
-      font-weight: 600;
-    }
-    .btu-tools .info p {
-      color: var(--second-color);
-      font-size: 18px;
-      line-height: 1.4;
-      font-weight: 400;
-    }
-    .btu-tools .info .cta {
-      margin-top: 40px;
-    }
-
-    .ar .why .content .cons .more h3 {
-      font-size: 21px;
-    }
-    .ar .video .content h1 {
-      font-size: 31px;
-    }
-    .ar .video .content .play .play-icon {
-      margin-left: 12px;
-    }
-    .ar .disting .content .info {
-      padding: 0 0 0 30px;
-      margin-bottom: 40px;
-      text-align: right;
-    }
-    .ar .join-select .custom-option {
-      text-align: right;
-    }
-    .ar .tips-watch .wrapper {
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-
-    .join-select .radio {
-      position: relative;
-      cursor: pointer;
-      line-height: 20px;
-      font-size: 18px;
-      margin: 25px;
-      margin-right: 0;
-      display: flex;
-    }
-    .join-select .radio .label {
-      position: relative;
-      display: block;
-      float: left;
-      margin-left: 10px;
-      width: 20px;
-      height: 20px;
-      border: 2px solid #c8ccd4;
-      border-radius: 100%;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .join-select .radio .label:after {
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
-      background: var(--third-color);
-      transform: scale(0);
-      transition: all 0.2s ease;
-      opacity: 0.08;
-      pointer-events: none;
-    }
-    .join-select .radio:hover .label:after {
-      transform: scale(3.6);
-    }
-    .join-select input[type="radio"]:checked + .label {
-      border-color: var(--third-color);
-    }
-    .join-select input[type="radio"]:checked + .label:after {
-      transform: scale(1);
-      transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
-      opacity: 1;
-    }
-    .join-select .cntr {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      text-align: center;
-      margin-top: 20px;
-    }
-    .join-select .hidden {
-      display: none;
-    }
-
-    .join-select .form__group {
-      position: relative;
-      padding: 15px 0 0;
-      margin-top: 10px;
-      width: 35%;
-    }
-
-    .join-select .form__field {
-      font-family: inherit;
-      width: 100%;
-      border: 0;
-      border-bottom: 2px solid var(--third-color);
-      outline: 0;
-      font-size: 1.3rem;
-      color: var(--third-color);
-      padding: 7px 0;
-      background: transparent;
-      transition: border-color 0.2s;
-    }
-    .join-select .form__field::placeholder {
-      color: transparent;
-    }
-    .join-select .form__field:placeholder-shown ~ .form__label {
-      font-size: 1.3rem;
-      cursor: text;
-      top: 20px;
-    }
-
-    .join-select .form__label {
-      position: absolute;
-      top: 0;
-      display: block;
-      transition: 0.2s;
-      font-size: 1rem;
-      color: var(--third-color);
-    }
-
-    .join-select .form__field:focus {
-      padding-bottom: 6px;
-      font-weight: 700;
-      border-width: 3px;
-      border-color: var(--third-color);
-      border-image-slice: 1;
-    }
-    .join-select .form__field:focus ~ .form__label {
-      position: absolute;
-      top: 0;
-      display: block;
-      transition: 0.2s;
-      font-size: 1rem;
-      color: var(--third-color);
-      font-weight: 700;
-    }
-
-    /* reset input */
-    .join-select .form__field:required,
-    .join-select .form__field:invalid {
-      box-shadow: none;
-    }
-
-    .join-select .sub-bn {
-      margin-top: 30px;
-    }
-    .join-select .sub-bn button {
-      border: none;
-      background: var(--third-color);
-      padding: 10px 30px;
-      font-size: 16px;
-      font-weight: 500;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-    .join-select .sub-bn button:hover {
-      opacity: 0.9;
-    }
-
-    @media screen and (max-width: 767px) {
-      .tips-hero {
-        height: 200px;
-      }
-      .tips-hero h1 {
-        font-size: 36px;
-      }
-      .join .content h3 {
-        font-size: 22px;
-      }
-      .videos .videos-content,
-      .disting .content,
-      .tips-tools .tooly,
-      .join-select .content,
-      .tips-tools .tooly:nth-child(even) {
-        flex-direction: column;
-      }
-      .tips-join .content {
-        padding: 0 5px;
-      }
-      .videos .videos-content .tip-video {
-        margin-bottom: 20px;
-      }
-      .videos .videos-content .tip-video .tip-info iframe {
-        width: 100%;
-        height: auto;
-      }
-
-      .tips-tools .content {
-        width: 100%;
-      }
-      .tips-tools .tooly .info {
-        text-align: left;
-        padding: 20px 10px 30px;
-      }
-      .tips-tools .tooly .tolly-img {
-        height: auto;
-      }
-
-      .disting .content .info {
-        padding: 0 0 50px 0;
-        text-align: left;
-      }
-      .disting .content .disting-img {
-        width: 100%;
-      }
-      .tips-watch {
-        height: 200px;
-      }
-      .tips-watch .content {
-        width: 100%;
-      }
-      .why.tips-us .content {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .why.tips-us .content .cons .img {
-        width: 50px;
-      }
-      .why.tips-us .content .cons .more h3 {
-        font-size: 16px;
-      }
-      .tips-tools .content .toolys,
-      .disting .content {
-        grid-template-columns: 1fr;
-      }
-      .tools-content,
-      .tips-tools .tooly .tolly-img.imgs {
-        height: auto;
-      }
-      .tools-content h3 {
-        font-size: 30px;
-      }
-      .tips-tools .content .toolys div:nth-child(2) .tooly:nth-child(1) {
-        margin-bottom: 20px;
-      }
-      .btu-tools {
-        flex-direction: column;
-      }
-      .btu-tools .icons-cal {
-        margin-top: 30px;
-      }
-
-      .join-select .cntr {
-        flex-direction: column;
-      }
-      .join-select .cntr {
-        align-items: flex-start;
-      }
-      .join-select .form__group {
-        width: 100%;
-      }
-      .ar .tips-hero h1 {
-        font-size: 32px;
-      }
-      .ar .video .content h1 {
-        font-size: 20px;
-      }
-      .ar .disting .content .info {
-        padding: 0;
-        margin-bottom: 40px;
-        text-align: right;
-      }
-      .ar .disting .content .info p {
-        font-size: 16px;
-      }
-      .ar .tools-content h3 {
-        font-size: 21px;
-      }
-      .ar .btu-tools .info {
-        padding: 0 10px 50px;
-      }
-      .ar .tips-tools .tooly .info {
-        text-align: right;
-      }
-      .ar .join .content h3 {
-        padding: 0 10px;
-      }
-    }
-  </style>
   <body>
     <div class="ar">
+      <!-- Navbar -->
+      <div class="navbar ar">
+        <div class="container">
+          <div class="nav">
+            <div class="logo">
+              <a href="expro-ar.html"
+                ><img src="img/kash-ar.jpg" alt="Kash logo"
+              /></a>
+            </div>
+            <div class="links">
+              <div class="sub-nav">
+                <button class="subnavbtn">
+                  <a
+                    href="https://york.com.sa/en/about-us-al-salem-johnson-controls"
+                    >عن يورك</a
+                  >
+                </button>
+              </div>
+              <div class="sub-nav">
+                <button class="subnavbtn">
+                  <a href="tips-ar.html" target="_blank">النصائح والحيل</a>
+                </button>
+              </div>
+              <div class="sub-nav">
+                <button class="subnavbtn">
+                  <a href="faq.html" target="_blank">أسئلة متكرر</a>
+                </button>
+              </div>
+              <div class="sub-nav">
+                <button class="subnavbtn">
+                  <a href="contact.html" target="_blank"> اتصل بنا</a>
+                </button>
+              </div>
+              <div class="sub-nav">
+                <button class="subnavbtn">
+                  <a
+                    href="https://york.com.sa/en/online-store-york"
+                    target="_blank"
+                    >تسوق</a
+                  >
+                </button>
+              </div>
+              <div class="sub-nav">
+                <button class="subnavbtn">
+                  <a href="https://kash.york.com.sa/register" target="_blank"
+                    >انشاء حساب</a
+                  >
+                </button>
+              </div>
+              <div class="sub-nav">
+                <button class="subnavbtn cta">
+                  <a href="https://kash.york.com.sa/login" target="_blank"
+                    >تسجيل دخول</a
+                  >
+                </button>
+              </div>
+              <div class="sub-nav">
+                <button class="subnavbtn">
+                  <a href="expro.html"
+                    ><img
+                      src="https://kash.york.com.sa/assets/images/flags/us.png"
+                      alt="English"
+                  /></a>
+                </button>
+              </div>
+              <div class="sub-nav">
+                <button class="subnavbtn">
+                  <a href="expro-ar.html"
+                    ><img
+                      src="https://kash.york.com.sa/assets/images/flags/sa.png"
+                      alt="Arabic"
+                  /></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Navbar -->
+
+      <!-- Mobile Nav -->
+
+      <div class="mobie">
+        <div class="container">
+          <div class="mob-nav">
+            <div class="logo">
+              <a href="expro.html"
+                ><img src="img/kash-en.jpg" alt="Kash Logo"
+              /></a>
+            </div>
+            <div class="toggle-nav hamburger" id="ham">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <nav class="nav-drill">
+            <ul class="nav-items nav-level-1">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://york.com.sa/en/about-us-al-salem-johnson-controls"
+                >
+                  عن يورك
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link goo" data-scroll="kash-head">
+                  ما هو برنامج كاش؟
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tips-ar.html" target="_blank"
+                  >النصائح والحيل
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html" target="_blank">
+                  أسئلة متكرر
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html" target="_blank">
+                  اتصل بنا</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://york.com.sa/en/online-store-york"
+                  target="_blank"
+                >
+                  تسوق</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://kash.york.com.sa/register"
+                  target="_blank"
+                >
+                  انشاء حساب
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://kash.york.com.sa/login"
+                  target="_blank"
+                >
+                  تسجيل دخول
+                </a>
+              </li>
+              <li class="nav-item flags">
+                <a class="nav-link" href="expro.html">
+                  <img
+                    src="https://kash.york.com.sa/assets/images/flags/us.png"
+                    alt="English"
+                  />
+                </a>
+                <a class="nav-link" href="expro-ar.html">
+                  <img
+                    src="https://kash.york.com.sa/assets/images/flags/sa.png"
+                    alt="Arabic"
+                  />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- End Mobile Nav -->
       <!-- Hero -->
       <div class="tips-hero">
         <h1>كيف تزيد مبيعاتك و دخلك؟</h1>
@@ -564,7 +201,8 @@
       <div class="join">
         <div class="content">
           <h3>
-            1-بدع في نشر رمزك الترويجي بعدة طرق و على أكثر من موقع تواصل اجتماعي
+            1-أبدّع في نشر رمزك الترويجي بعدة طرق و على أكثر من موقع تواصل
+            اجتماعي
           </h3>
         </div>
       </div>
@@ -576,7 +214,7 @@
           <div class="content">
             <div class="cons">
               <div class="img">
-                <img src="imgs/share.svg" alt="Social media" />
+                <img src="img/share.svg" alt="Social media" />
               </div>
               <div class="more">
                 <h3>برامج التواصل الاجتماعي</h3>
@@ -584,7 +222,7 @@
             </div>
             <div class="cons">
               <div class="img">
-                <img src="imgs/copywriting.svg" alt="Blogs & Vlogs" />
+                <img src="img/copywriting.svg" alt="Blogs & Vlogs" />
               </div>
               <div class="more">
                 <h3>المدونات</h3>
@@ -592,7 +230,7 @@
             </div>
             <div class="cons">
               <div class="img">
-                <img src="imgs/poster.svg" alt="Printouts" />
+                <img src="img/poster.svg" alt="Printouts" />
               </div>
               <div class="more">
                 <h3>توزيع المطبوعات</h3>
@@ -600,10 +238,10 @@
             </div>
             <div class="cons">
               <div class="img">
-                <img src="imgs/groups.svg" alt="Gatherings" />
+                <img src="img/groups.svg" alt="Gatherings" />
               </div>
               <div class="more">
-                <h3>الأفراد و المجموعات</h3>
+                <h3>التحاور مع الأفراد و المجموعات</h3>
               </div>
             </div>
           </div>
@@ -615,7 +253,7 @@
       <!-- Join -->
       <div class="join tips-join">
         <div class="content">
-          <h3>2-تعرف أكثر على منتجاتنا عن طريق زيارة متجرنا الإلكتروني</h3>
+          <h3>2-تعرّف أكثر على منتجاتنا عن طريق زيارة متجرنا الإلكتروني</h3>
           <br />
           <a
             href="https://york.com.sa/en/store"
@@ -623,6 +261,13 @@
             class="tip-shop"
             >زور متجرنا الآن</a
           >
+        </div>
+      </div>
+      <!-- End Join -->
+      <!-- Join -->
+      <div class="join tips-join" style="border-top: 1px solid #fff">
+        <div class="content">
+          <h3>3-تعرّف اكثر على يورك</h3>
         </div>
       </div>
       <!-- End Join -->
@@ -634,7 +279,7 @@
           <div class="container">
             <div class="set-color">
               <div class="content">
-                <h1>لماذا يورك</h1>
+                <h1>لماذا يورك؟</h1>
                 <div class="play">
                   <div class="plays">
                     <div class="play-icon">
@@ -679,7 +324,7 @@
       <div class="watch">
         <div class="wrapper">
           <div class="close-video">
-            <img src="imgs/icon-close.svg" alt="close" />
+            <img src="img/icon-close.svg" alt="close" />
           </div>
           <div class="container">
             <div class="content">
@@ -705,7 +350,7 @@
       <!-- Join -->
       <div class="join">
         <div class="content">
-          <h3>3-تعرف على المزيد حول برنامج KASH</h3>
+          <h3>4-تعرّف اكثر على برنامج كاش</h3>
         </div>
       </div>
       <!-- End Join -->
@@ -713,7 +358,7 @@
         <div class="container">
           <div class="videos-content">
             <div class="tip-video">
-              <h3>مشاهدة الفيديوهات التعريفية عن برنامج كاش.</h3>
+              <!-- <h3>مشاهدة الفيديوهات التعريفية عن برنامج كاش.</h3> -->
               <div class="tip-info">
                 <iframe
                   src="https://player.vimeo.com/video/533935156?title=0&byline=0&portrait=0"
@@ -725,7 +370,7 @@
               </div>
             </div>
             <div class="tip-video">
-              <h3>ابتكر طرق جديدة للوصول لعملاء أكثر.</h3>
+              <!-- <h3>ابتكر طرق جديدة للوصول لعملاء أكثر.</h3> -->
               <div class="tip-info">
                 <iframe
                   title="vimeo-player"
@@ -744,7 +389,7 @@
       <!-- Joins -->
       <div class="join">
         <div class="content">
-          <h3>4-شارك ممميزات رمزك الترويجي مع عملائك!</h3>
+          <h3>5-شارك مميزات رمزك الترويجي مع عملائك!</h3>
         </div>
       </div>
       <!-- End Join -->
@@ -754,18 +399,18 @@
           <div class="content">
             <div class="info">
               <p>
-                باستخدام رمزك الترويجي يقدرعميلك يحصل على خصم إضافي على العروض
-                الحالية المتوفرة على متجرنا الإلكتروني! و اذا مافي خصم عالموقع
-                يقدر يحصل على خصم طوال السنة باستخدام رمزك الترويجي
+                باستخدام رمزك الترويجي يقدر عميلك يحصل على خصم إضافي على العروض
+                المتوفرة حالياً على متجرنا الإلكتروني! و بإمكان عميلك الحصول على
+                خصم طوال السنة باستخدام رمزك الترويجي
               </p>
               <div class="cta">
-                <a href="imgs/promo-code.jpg" target="_blank" download
-                  >تحميل
+                <a href="img/promo-code.jpg" target="_blank" download
+                  >تحميل الملصق
                 </a>
               </div>
             </div>
             <div class="disting-img">
-              <img src="imgs/promo-code.jpg" alt="promo-code" />
+              <img src="img/promo-code.jpg" alt="promo-code" />
             </div>
           </div>
         </div>
@@ -787,11 +432,11 @@
                 <div class="btu-tools">
                   <div class="icons-cal">
                     <div class="imgy">
-                      <img src="imgs/calculator.svg" alt="calculator" />
+                      <img src="img/calculator.svg" alt="calculator" />
                     </div>
                   </div>
                   <div class="info">
-                    <h4>قياس الوحدة</h4>
+                    <h4>حاسبة قياس الوحدة</h4>
                     <p>
                       ساعد عميلك في اختيار وحدة المكيف الأنسب له باستخدام قياس
                       الوحدة المتوفرة على موقعنا الإلكتروني.
@@ -801,7 +446,8 @@
                         href="https://york.com.sa/ar/btu-calculator"
                         target="_blank"
                         download
-                        >قياس الوحدة</a
+                      >
+                        حاسبة قياس الوحدة</a
                       >
                     </div>
                   </div>
@@ -809,17 +455,17 @@
                 <div class="tooly">
                   <div class="info spec">
                     <h4>
-                      استخدم النص كمثال عند الإعلان عن رمزك الترويجي (ننصحك تغير
-                      المحتوى و تبدع فيه بطريقتك).
+                      حمّل الملصق وشاركه مع عملائك لتسهيل عملية اتمام الشراء
+                      بإستخادم رمزك الترويجي
                     </h4>
                     <div class="cta">
-                      <a href="imgs/communi-full.jpg" target="_blank" download
-                        >تحميل
+                      <a href="img/communi-full.jpg" target="_blank" download
+                        >تحميل الملصق
                       </a>
                     </div>
                   </div>
                   <div class="tolly-img img-full">
-                    <img src="imgs/communi-full.jpg" alt="communi" />
+                    <img src="img/communi-full.jpg" alt="communi" />
                   </div>
                 </div>
               </div>
@@ -837,20 +483,23 @@
                     </div>
                   </div>
                   <div class="tolly-img imgs">
-                    <img src="imgs/whatsapp.jpg" alt="WhatsApp" />
+                    <img src="img/whatsapp.jpg" alt="WhatsApp" />
                   </div>
                 </div>
                 <div class="tooly">
                   <div class="info">
-                    <h4>أنشر و شارك الملصقات أدناه مع عملائك.</h4>
+                    <h4>
+                      حمّل الملصق واضف رمزك الترويجي فى الخانة الفارغة لمشاركتها
+                      مع عملائك
+                    </h4>
                     <div class="cta">
-                      <a href="imgs/promo.jpg" target="_blank" download
-                        >تحميل
+                      <a href="img/promo.jpg" target="_blank" download
+                        >تحميل الملصق
                       </a>
                     </div>
                   </div>
                   <div class="tolly-img">
-                    <img src="imgs/promo.jpg" alt="promo" />
+                    <img src="img/promo.jpg" alt="promo" />
                   </div>
                 </div>
               </div>
@@ -868,24 +517,21 @@
             </h3>
           </div>
           <div class="cntr">
+            <label for="opt4" class="radio">
+              <input type="radio" name="rdo" id="opt4" class="hidden" />
+              <span class="label"></span>واتس أب
+            </label>
             <label for="opt1" class="radio">
               <input type="radio" name="rdo" id="opt1" class="hidden" />
               <span class="label"></span>رسائل نصية
             </label>
-
-            <label for="opt2" class="radio">
-              <input type="radio" name="rdo" id="opt2" class="hidden" />
-              <span class="label"></span>مكالمات هاتفية
-            </label>
-
             <label for="opt3" class="radio">
               <input type="radio" name="rdo" id="opt3" class="hidden" />
               <span class="label"></span>بريد إلكتروني
             </label>
-
-            <label for="opt4" class="radio">
-              <input type="radio" name="rdo" id="opt4" class="hidden" />
-              <span class="label"></span>واتس أب
+            <label for="opt2" class="radio">
+              <input type="radio" name="rdo" id="opt2" class="hidden" />
+              <span class="label"></span>مكالمات هاتفية
             </label>
           </div>
           <div class="sub-bn">
